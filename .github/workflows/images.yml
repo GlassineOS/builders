@@ -42,8 +42,8 @@ jobs:
         run: |
           for p in $(echo "${{ matrix.platforms }}" | tr , ' '); do
             docker buildx build --load --platform "$p" -t test:local \
-              --cache-from type=gha,scope=${{ matrix.image }}-${p#*/} \
-              --cache-to type=gha,mode=max,scope=${{ matrix.image }}-${p#*/} \
+              --cache-from "type=gha,scope=${{ matrix.image }}-${p#*/}" \
+              --cache-to "type=gha,mode=max,scope=${{ matrix.image }}-${p#*/}" \
               ${{ matrix.image }}
             docker run --rm --platform "$p" -v "$PWD/${{ matrix.image }}/test.sh:/t.sh:ro" test:local sh /t.sh
           done
