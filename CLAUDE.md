@@ -10,3 +10,7 @@ and test locally for every platform of the image before pushing:
   component or image repositories).
 - Commits carry an `Assisted-by:` or `Co-Authored-By:` trailer. Never add
   `Signed-off-by`. Run `.glassine/org/scripts/safety-scan.sh --staged` before committing.
+- Organization guidance for coding agents, including the project knowledge search
+  (run `git submodule update --init` if the import below is missing):
+
+@.glassine/org/AGENTS.md
