@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 # Alpine build environment: compiles GlassineOS components, builds APKs (abuild) and
 # assembles images. Built for linux/arm64 (the devices) and linux/amd64 (CI, tests).
-ARG ALPINE=3.22
+ARG ALPINE=3.24
 FROM alpine:${ALPINE}
 # toolchain, packaging and image assembly
 RUN apk add --no-cache alpine-sdk abuild-rootbld meson ninja pkgconf linux-headers patch curl \
