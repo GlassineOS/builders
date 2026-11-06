@@ -33,10 +33,6 @@ updates.
 docker pull ghcr.io/glassineos/alpine-build:3.24
 ```
 
-While this repository is private, the packages are too: log in first with a token that
-has `read:packages` (`gh auth refresh -s read:packages`, then
-`gh auth token | docker login ghcr.io -u <user> --password-stdin`).
-
 ## Changing an image
 
 Edit the `Dockerfile`, extend the image's `test.sh` so the new tool or library is
